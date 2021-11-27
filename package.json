@@ -1,0 +1,25 @@
+{
+  "name": "smart-home-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tailwindcss -i tailwind.css -o ./assets/styles/tailwindStyle.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadh393/boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saadh393/boilerplate/issues"
+  },
+  "homepage": "https://github.com/saadh393/boilerplate#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.3",
+    "tailwindcss": "^2.2.19"
+  }
+}
