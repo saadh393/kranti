@@ -1,26 +1,7 @@
-# Tailwindcss Boilerplate v3.1
+<center>
+    <img src='./dist/images/logo.png' width='250px'>
+</center>
 
-Clone the Repository
+# Kranti Associates Ltd
 
-```
-git clone --single-branch --branch tailwindcss https://github.com/saadh393/boilerplate.git
-
-```
-
-Remove Existing Remote Repository
-
-```
-git remote remove origin
-```
-
-Install packages using NPM
-
-```
-npm install
-```
-
-Run tailwind compiler
-
-```
-npm start
-```
+Kranti Associates Ltd. was established in 1989 to provide development and management consultancy Services to a wide spectrum of both public as well as private sector clientele. Over the years, Kranti has successfully undertaken 200+ projects, both funded by Government of Bangladesh as well as important development partners like World Bank, ADB, EU, IFAD, CIDA, SIDA, the Governments of Germany & The Netherlands. Kranti has also executed a mentionable number of projects in association with foreign firms
