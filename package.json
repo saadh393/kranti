@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tailwindcss -i tailwind.css -o ./assets/styles/tailwindStyle.css -w"
+    "start": "tailwindcss -i ./src/tailwind.css -o ./dist/styles/styles.css -w"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,6 @@
   },
   "homepage": "https://github.com/saadh393/boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.3",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^3.0.1"
   }
 }
