@@ -1,0 +1,14 @@
+* {
+  font-family: "Mulish";
+}
+
+/* Margin Padding Utilities */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Color Utilities */
+.bg-primary {
+  background: transparent linear-gradient(90deg, #d32c32 0%, #ff464c 100%) 0% 0% no-repeat padding-box;
+}

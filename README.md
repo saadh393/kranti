@@ -1,6 +1,4 @@
-<center>
-    <img src='./dist/images/logo.png' width='250px'>
-</center>
+<img src='./dist/images/logo.png' style="margin:0 auto" width='250px'>
 
 # Kranti Associates Ltd
 

@@ -1,4 +1,13 @@
 @import "tailwindcss/base";
-@import "./custom.css";
+
+/* Font Importaing */
+@import "./fonts.css";
+
+/* Utilities */
+@import "./custom-utilities.css";
+
+/* Pages */
+@import "./home-page.css";
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

@@ -8,8 +8,48 @@
     <title>Tailwindcss</title>
   </head>
   <body>
-    <div class="hello w-screen h-screen bg-blue-700 text-white grid place-items-center">
-      <h1 class="text-5xl font-bold">Welcome Home</h1>
-    </div>
+    <nav class="wrapper backdrop-blur-sm absolute top-0 left-0 right-0 bg-white/30 overflow-hidden rounded-bl-2xl rounded-br-2xl">
+      <div class="flex justify-between items-end pl-4">
+        <img class="h-20 mb-2" src="./dist/images/logo.png" />
+        <ul class="flex gap-x-8 items-center">
+          <li>
+            <a href="#">About Us</a>
+          </li>
+
+          <li>
+            <a href="#">Services</a>
+          </li>
+
+          <li>
+            <a href="#">Projects</a>
+          </li>
+
+          <li class="bg-primary px-6 py-3 text-white rounded-tl-2xl">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+      <a href="#">
+        <div class="space-y-5 bg-center w-full h-[650px] text-center flex items-center flex-col justify-center bg-cover hero-banner">
+          <h1 class="text-primary text-6xl font-bold">Consultancy Services</h1>
+          <h4 class="text-slate-100 text-2xl font-medium">in Multi-Disciplinary Sectors</h4>
+        </div>
+      </a>
+
+      <!-- Bottom menu  -->
+      <div class="-mt-20 wrapper">
+        <div class="w-48 h-48 p-5 bg-slate-50/40 backdrop-blur-xl flex flex-col justify-center items-center gap-4 rounded-md">
+          <img class="mx-auto" src="./dist/images/svg/team.svg" />
+          <h4 class="text-slate-800 text-center text-lg font-medium">Strategy Management</h4>
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero Section -->
+
+    <section class="h-screen"></section>
   </body>
 </html>
