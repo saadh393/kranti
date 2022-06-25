@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/styles/styles.css" />
+    <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
     <title>Tailwindcss</title>
   </head>
   <body>
@@ -40,16 +41,68 @@
         </div>
       </a>
 
-      <!-- Bottom menu  -->
-      <div class="-mt-20 wrapper">
-        <div class="w-48 h-48 p-5 bg-slate-50/40 backdrop-blur-xl flex flex-col justify-center items-center gap-4 rounded-md">
-          <img class="mx-auto" src="./dist/images/svg/team.svg" />
-          <h4 class="text-slate-800 text-center text-lg font-medium">Strategy Management</h4>
-        </div>
+      <!-- Services Bottom Menu  -->
+      <div
+        class="-mt-20 wrapper flex justify-between"
+        x-data="{services : [
+        {
+          name : 'Strategy Management',
+          image : 'team'
+        }, {
+          name : 'Production Planning & Factory Manufacture',
+          image : 'manufacture'
+        }, {
+          name : 'Business Process Automation',
+          image : 'automation'
+        }, {
+          name : 'Research & Development',
+          image : 'analysis'
+        }, {
+          name : 'Process & Service Optimization',
+          image : 'optimize'
+        },{
+          name : 'Process & Service Optimization',
+          image : 'cogwheel'
+        },
+        ]}"
+      >
+        <template x-for="service in services">
+          <div
+            class="group hover:bg-primary transition-all cursor-pointer w-48 h-48 p-5 bg-slate-50/40 backdrop-blur-xl flex flex-col justify-center items-center gap-4 rounded-md"
+          >
+            <img class="mx-auto group-hover:hidden" :src="`./dist/images/services-svg/${service.image}.svg`" />
+            <img class="mx-auto hidden group-hover:block" :src="`./dist/images/services-svg/${service.image}-white.svg`" />
+            <h4 x-text="service.name" class="text-slate-800 group-hover:text-slate-100 group-hover:font-bold text-center text-sm font-medium"></h4>
+          </div>
+        </template>
       </div>
     </section>
     <!-- End of Hero Section -->
 
-    <section class="h-screen"></section>
+    <!-- About Us Seciton -->
+    <section class="wrapper my-20">
+      <div class="grid grid-cols-2 gap-10">
+        <!-- Text -->
+        <div class="space-y-10 w-full">
+          <h4 class="uppercase text-primary font-bold">About Us</h4>
+          <h1 class="text-5xl drop-shadow-sm">To Have A Connected And Sustainable World</h1>
+          <p class="leading-8 text-lg">
+            Kranti Associates Canada Limited was established in 2011 under the Canadian Federal Jurisdiction to provide unmatched consultancy services in multi-disciplinary
+            sectors. <br /><br />
+            Kranti helps governments, organizations and individuals create value where they are looking and provides project evaluation, monitoring and quality assurance services.
+            Kranti has a pool of expertise and advisors from Canadian and Bangladeshi Institutions. The group has knowledge and skills gathered from the University of Waterloo,
+            University of British Columbia, Carleton University, Dhaka University, Dhaka University – Department of Business Administration and Mymensingh Agricultural University,
+            among others.
+          </p>
+
+          <a href="#"> Read More </a>
+        </div>
+
+        <!-- Image -->
+        <div class="w-full h-[650px]">
+          <img class="w-full h-full object-cover" src="./dist/images/about-us.png" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
