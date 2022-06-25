@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/styles/styles.css" />
+
+    <!-- Defer Scripts -->
     <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+    <!-- Internal Styles -->
+    <link rel="stylesheet" href="./dist/styles/styles.css" />
+
     <title>Tailwindcss</title>
   </head>
   <body>
@@ -34,7 +44,7 @@
 
     <!-- Hero Section -->
     <section>
-      <a href="#">
+      <a href="#" class="block hover:no-underline">
         <div class="space-y-5 bg-center w-full h-[650px] text-center flex items-center flex-col justify-center bg-cover hero-banner">
           <h1 class="text-primary text-6xl font-bold">Consultancy Services</h1>
           <h4 class="text-slate-100 text-2xl font-medium">in Multi-Disciplinary Sectors</h4>
@@ -95,7 +105,7 @@
             among others.
           </p>
 
-          <a href="#"> Read More </a>
+          <a href="#" class="link"> Read More </a>
         </div>
 
         <!-- Image -->
@@ -104,5 +114,102 @@
         </div>
       </div>
     </section>
+
+    <!-- Banner Section -->
+    <section class="bg-primary py-10 my-40">
+      <div class="wrapper">
+        <div
+          class="grid grid-cols-3"
+          x-data="{counters : [
+          {top : 'Served', bottom : 'Clients', count : '20+', img : 'rating'},
+          {top : 'Across', bottom : 'Countries', count : '9+',  img : 'coronavirus'},
+          {top : 'Countries', bottom : 'Countries', count : '6+',  img : 'trade'},
+          ]}"
+        >
+          <template x-for="counter in counters">
+            <div class="flex gap-10 items-center justify-center">
+              <img class="w-[100px]" :src="`./dist/images/svg/${counter.img}.svg`" />
+              <div class="text-slate-100">
+                <h4 x-text="counter.top"></h4>
+                <h1 class="text-7xl font-semibold" x-text="counter.count"></h1>
+                <h4 x-text="counter.bottom"></h4>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Vission Values -->
+    <section class="wrapper my-20">
+      <div class="grid grid-cols-2 gap-10">
+        <!-- Images -->
+        <div class="w-full relative">
+          <img class="h-[360px] object-contain absolute right-0 top-0" src="./dist/images/core-large.png" />
+          <img class="h-[250px] object-contain absolute left-0 top-[180px] border-slate-50 border-8" src="./dist/images/core-small.jpg" />
+        </div>
+
+        <!-- Contents -->
+        <div class="space-y-10 w-full">
+          <h4 class="uppercase text-primary font-bold">OUR CORE PHILOSOPHY</h4>
+          <h1 class="text-5xl drop-shadow-sm">Here To Make A Difference</h1>
+          <div>
+            <ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  href="#tabs-mission"
+                  class="nav-link block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100 focus:border-transparent active"
+                  id="tabs-mission-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tabs-mission"
+                  role="tab"
+                  aria-controls="tabs-mission"
+                  aria-selected="true"
+                  >Our Mission</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  href="#tabs-Vision"
+                  class="nav-link block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100 focus:border-transparent"
+                  id="tabs-Vision-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tabs-Vision"
+                  role="tab"
+                  aria-controls="tabs-Vision"
+                  aria-selected="false"
+                  >Vision</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  href="#tabs-values"
+                  class="nav-link block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100 focus:border-transparent"
+                  id="tabs-values-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tabs-values"
+                  role="tab"
+                  aria-controls="tabs-values"
+                  aria-selected="false"
+                  >Values</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content" id="tabs-tabContent">
+              <div class="tab-pane fade show active" id="tabs-mission" role="tabpanel" aria-labelledby="tabs-mission-tab">
+                Kranti Associates missions is to provide you with realistic and executable recommendations to help you make the best decisions for the successful growth of your
+                business and its expansion globally.
+              </div>
+              <div class="tab-pane fade" id="tabs-Vision" role="tabpanel" aria-labelledby="tabs-Vision-tab">Tab 2 content</div>
+              <div class="tab-pane fade" id="tabs-values" role="tabpanel" aria-labelledby="tabs-values-tab">Tab 3 content</div>
+            </div>
+          </div>
+
+          <a href="#" class="link"> Read More </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-screen"></section>
   </body>
 </html>
