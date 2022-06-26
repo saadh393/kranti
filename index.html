@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./dist/styles/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./dist/styles/owl.theme.default.min.css" />
+
     <!-- Internal Styles -->
     <link rel="stylesheet" href="./dist/styles/styles.css" />
 
@@ -210,6 +214,99 @@
       </div>
     </section>
 
+    <!-- Testimonial -->
+    <section class="testimonial-banner">
+      <div class="wrapper py-28">
+        <h4 class="uppercase text-primary font-bold">Testimonials</h4>
+        <!-- Clients Testimonial And Arrow Button -->
+        <div class="flex justify-between my-10">
+          <h1 class="text-5xl drop-shadow-sm text-slate-50">Client Comments</h1>
+          <div class="flex gap-5">
+            <div onclick="$('.owl-next')[0].click()" class="btn-previous w-10 h-10 grid place-items-center bg-primary rounded-full cursor-pointer hover:bg-white">
+              <i class="fa-solid fa-arrow-left text-white"></i>
+            </div>
+
+            <div onclick="$('.owl-prev')[0].click()" class="btn-next w-10 h-10 grid place-items-center bg-primary rounded-full cursor-pointer group group-hover:bg-white">
+              <i class="fa-solid fa-arrow-right text-white"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- slider -->
+        <div class="owl-carousel owl-theme">
+          <!-- Card -->
+          <div class="bg-white w-[416px] rounded-lg shadow-lg px-6 py-8">
+            <div class="flex items-center gap-5">
+              <div class="w-14 h-14">
+                <img class="w-full h-full object-cover rounded-full" src="./dist/images/core-large.png" />
+              </div>
+              <div class="w-full flex-1">
+                <h3 class="text-lg text-slate-900">Dorothy Coleman</h3>
+                <p class="text-base text-slate-700">Head of Finance, XYZ</p>
+              </div>
+            </div>
+            <p class="text-xl text-slate-800 mt-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-white w-[416px] rounded-lg shadow-lg px-6 py-8">
+            <div class="flex items-center gap-5">
+              <div class="w-14 h-14">
+                <img class="w-full h-full object-cover rounded-full" src="./dist/images/core-large.png" />
+              </div>
+              <div class="w-full flex-1">
+                <h3 class="text-lg text-slate-900">Dorothy Coleman</h3>
+                <p class="text-base text-slate-700">Head of Finance, XYZ</p>
+              </div>
+            </div>
+            <p class="text-xl text-slate-800 mt-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-white w-[416px] rounded-lg shadow-lg px-6 py-8">
+            <div class="flex items-center gap-5">
+              <div class="w-14 h-14">
+                <img class="w-full h-full object-cover rounded-full" src="./dist/images/core-large.png" />
+              </div>
+              <div class="w-full flex-1">
+                <h3 class="text-lg text-slate-900">Dorothy Coleman</h3>
+                <p class="text-base text-slate-700">Head of Finance, XYZ</p>
+              </div>
+            </div>
+            <p class="text-xl text-slate-800 mt-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="h-screen"></section>
+
+    <script src="./dist/scripts/jquery.min.js"></script>
+    <script src="./dist/scripts/owl.carousel.min.js"></script>
+    <script>
+      // Testimonial Carousel
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          center: true,
+          margin: 10,
+          animateIn: true,
+          dots: true,
+          rewind: true,
+          nav: true,
+          autoplayTimeout: 2500,
+          autoplayHoverPause: true,
+          slideTransition: "ease",
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
