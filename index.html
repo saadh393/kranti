@@ -20,7 +20,7 @@
     <!-- Internal Styles -->
     <link rel="stylesheet" href="./dist/styles/styles.css" />
 
-    <title>Tailwindcss</title>
+    <title>Kranti</title>
   </head>
   <body>
     <nav class="wrapper backdrop-blur-sm absolute top-0 left-0 right-0 bg-white/30 overflow-hidden rounded-bl-2xl rounded-br-2xl">
@@ -279,10 +279,189 @@
       </div>
     </section>
 
-    <section class="h-screen"></section>
+    <!-- Blog Section -->
+    <section class="wrapper py-28">
+      <h4 class="uppercase text-primary font-bold text-center">Blog</h4>
+      <h1 class="text-5xl drop-shadow-sm text-slate-900 text-center mt-6">Client Comments</h1>
+
+      <div class="grid grid-cols-3 gap-10 mt-20" x-data="{blogs : [1,2,3]}">
+        <template x-for="blog in blogs">
+          <div class="">
+            <img class="w-full h-[300px] object-cover" src="./dist/images/blog/blog-thumb-1.jpg" />
+            <div class="bg-white rounded-md shadow-md px-4 py-6 space-y-3 h-[260px] relative">
+              <h5 class="text-base text-slate-700">22 March 2021</h5>
+              <h3 class="text-xl text-slate-900 font-bold">The Real Reason We Need To Stop Trying Too Hard In Automation</h3>
+              <p class="text-lg slate-700 line-clamp-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a href="" class="absolute bg-primary rounded-full right-5 -top-6 px-5 py-2 text-white shadow-md shadow-red-600/40">Read Full</a>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section>
+      <div style="pointer-events: none; border: 0">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1668.6462087467285!2d-75.93643606327208!3d45.30201708669018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd2006082835449%3A0x391fb782ad9976c7!2s213%20Mission%20Trail%20Cres%2C%20Stittsville%2C%20ON%20K2S%201B9%2C%20Canada!5e0!3m2!1sen!2sbd!4v1656325174758!5m2!1sen!2sbd"
+          width="100%"
+          height="600"
+          style="border: 0"
+          allowfullscreen="false"
+          loading="lazy"
+          disableDefaultUI="true"
+          scrolling="false"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div
+        class="-mt-20 wrapper flex justify-center gap-10"
+        x-data="{communications : [
+        {
+          name : 'Email',
+          subtitle : 'kranticanada@gmail.com',
+          image : 'open-email'
+        }, {
+          name : 'Phone',
+          subtitle : '+1-613-402-6848',
+          image : 'phone-call'
+        }, {
+          name : 'Office Address',
+          subtitle : '213 Mission Trail Crescent Kanata, Ontario, K2TOH7 Canada',
+          image : 'office-building'
+        }
+        ]}"
+      >
+        <template x-for="communication in communications">
+          <div
+            class="group hover:bg-primary border border-slate-400/20 transition-all cursor-pointer w-52 h-52 p-5 bg-slate-50/40 backdrop-blur-xl flex flex-col justify-center items-center rounded-md"
+          >
+            <img class="h-16 w-16 mx-auto group-hover:hidden" :src="`./dist/images/contact/${communication.image}-default.svg`" />
+            <img class="h-16 w-16 mx-auto hidden group-hover:block" :src="`./dist/images/contact/${communication.image}-active.svg`" />
+            <h4 x-text="communication.name" class="mt-4 text-slate-800 group-hover:text-slate-100 group-hover:font-bold text-center text-base font-bold"></h4>
+            <p x-text="communication.subtitle" class="text-center text-xs group-hover:text-slate-100"></p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Get in touch -->
+    <section class="wrapper py-28">
+      <h4 class="uppercase text-primary font-bold text-center">Write Here</h4>
+      <h1 class="text-5xl drop-shadow-sm text-slate-900 text-center mt-6">Get In Touch</h1>
+
+      <form method="POST" action="" class="w-8/12 mx-auto my-10">
+        <!-- Row with two column -->
+        <div class="grid grid-cols-2 mt-4 gap-5">
+          <div class="w-full">
+            <label for="name"> Name </label>
+            <input class="w-full" type="name" placeholder="Enter Your Name Here" name="name" />
+          </div>
+
+          <div class="w-full">
+            <label for="email"> Email Address </label>
+            <input class="w-full" type="email" placeholder="Enter Your email Here" name="email" />
+          </div>
+        </div>
+        <!-- Row with Two column Ends Here -->
+        <textarea placeholder="Type your Message Here" name="message" rows="10" class="w-full mt-5"></textarea>
+
+        <button class="block mt-5 bg-primary rounded-full px-5 py-2 text-white shadow-md shadow-red-600/40 mx-auto" type="submit" value="Submit">Submit</button>
+      </form>
+    </section>
+
+    <footer class="footer-bg bg-cover bg-center">
+      <!-- Card -->
+      <div class="wrapper grid grid-cols-3 justify-items-center">
+        <div class="w-[350px] border-t-4 bg-[#F1F5F9] border-primary p-4 text-center -mt-16 mb-20">
+          <img class="mx-auto" src="./dist/images/logo.png" alt="Kranti Associates LTD." />
+          <p class="text-sm text-slate-700">
+            Kranti Associates Canada Limited was established in 2011 under the Canadian Federal Jurisdiction to provide unmatched consultancy services in multi-disciplinary
+            sectors.
+          </p>
+          <!-- social Media -->
+          <div class="flex gap-5 justify-center my-5">
+            <!-- Facebook -->
+            <a href="#" class="w-10 h-10 grid place-items-center bg-[#E2E8F0] rounded-full group transition-colors cursor-pointer hover:bg-[#D32C32] hover:shadow-primary">
+              <img class="w-5 h-5 group-hover:hidden" src="./dist/images/social-media/facebook-default.svg" alt="Faecbook Page of Kranti Associates" />
+              <img class="w-6 h-6 group-hover:block hidden" src="./dist/images/social-media/facebook-active.svg" alt="Faecbook Page of Kranti Associates" />
+            </a>
+
+            <!-- Twitter -->
+            <a href="#" class="w-10 h-10 grid place-items-center bg-[#E2E8F0] rounded-full group transition-colors cursor-pointer hover:bg-[#D32C32] hover:shadow-primary">
+              <img class="w-5 h-5 group-hover:hidden" src="./dist/images/social-media/twitter-default.svg" alt="Faecbook Page of Kranti Associates" />
+              <img class="w-6 h-6 group-hover:block hidden" src="./dist/images/social-media/twitter-active.svg" alt="Faecbook Page of Kranti Associates" />
+            </a>
+
+            <!-- Linkedin -->
+            <a href="#" class="w-10 h-10 grid place-items-center bg-[#E2E8F0] rounded-full group transition-colors cursor-pointer hover:bg-[#D32C32] hover:shadow-primary">
+              <img class="w-5 h-5 group-hover:hidden" src="./dist/images/social-media/linkedin-default.svg" alt="Faecbook Page of Kranti Associates" />
+              <img class="w-6 h-6 group-hover:block hidden" src="./dist/images/social-media/linkedin-active.svg" alt="Faecbook Page of Kranti Associates" />
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-20">
+          <h3 class="text-slate-100 font-medium text-xl">Services</h3>
+          <ul class="text-slate-100 text-sm ml-3 mt-2 space-y-2">
+            <li>
+              <a href="#">Service Page 1</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 2</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 3</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 4</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 5</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-20">
+          <h3 class="text-slate-100 font-medium text-xl">Logical Facilities</h3>
+          <ul class="text-slate-100 text-sm ml-3 mt-2 space-y-2">
+            <li>
+              <a href="#">Logical Facilities 1</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 2</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 3</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 4</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 5</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-center text-white pb-8">Designed and Developed by <img class="inline-block" src="./dist/images/analyzen.svg" /></p>
+      </div>
+    </footer>
 
     <script src="./dist/scripts/jquery.min.js"></script>
     <script src="./dist/scripts/owl.carousel.min.js"></script>
+
     <script>
       // Testimonial Carousel
       $(document).ready(function () {
