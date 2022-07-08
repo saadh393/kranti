@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Defer Scripts -->
-    <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
+    <script defer src="./dist/scripts/alpine.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
     <!-- External Styles -->
@@ -16,17 +16,18 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="./dist/styles/owl.carousel.min.css" />
     <link rel="stylesheet" href="./dist/styles/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Internal Styles -->
     <link rel="stylesheet" href="./dist/styles/styles.css" />
 
-    <title>Kranti</title>
+    <title>Home | Kranti Associates LTD.</title>
   </head>
   <body>
     <nav class="wrapper backdrop-blur-sm absolute top-0 left-0 right-0 bg-white/30 overflow-hidden rounded-bl-2xl rounded-br-2xl">
-      <div class="flex justify-between items-end pl-4">
+      <div class="flex justify-between items-center md:items-end md:pl-4">
         <img class="h-20 mb-2" src="./dist/images/logo.png" />
-        <ul class="flex gap-x-8 items-center">
+        <ul class="hidden md:flex gap-x-8 items-center">
           <li>
             <a href="#">About Us</a>
           </li>
@@ -43,7 +44,29 @@
             <a href="#">Contact Us</a>
           </li>
         </ul>
+        <svg id="hamburger" width="25" height="20" viewBox="0 0 16 15" data-state="closed" class="mr-4 md:hidden block" xmlns="http://www.w3.org/2000/svg">
+          <rect class="transition-all" id="one" x="6.85144" y="1.23901" width="8.85718" height="1.49418" rx="0.747088" fill="#fff" />
+          <rect class="transition-all" id="two" x="0.193237" y="7.26367" width="15.5153" height="1.49418" rx="0.747088" fill="#fff" />
+          <rect class="transition-all" id="three" x="4.2196" y="13.2584" width="11.4889" height="1.49418" rx="0.747088" fill="#fff" />
+        </svg>
       </div>
+      <ul class="text-center transition-all max-h-[190px] h-0" id="mobileNav">
+        <li class="border-t py-3 border-slate-200/10">
+          <a href="#">About Us</a>
+        </li>
+
+        <li class="border-t py-3 border-slate-200/10">
+          <a href="#">Services</a>
+        </li>
+
+        <li class="border-t py-3 border-slate-200/10">
+          <a href="#">Projects</a>
+        </li>
+
+        <li class="bg-primary px-6 py-3 text-white">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -57,7 +80,7 @@
 
       <!-- Services Bottom Menu  -->
       <div
-        class="-mt-20 wrapper flex justify-between"
+        class="-mt-20 wrapper flex gap-5 justify-between max-w-[100vw] md:max-w-7xl overflow-auto"
         x-data="{services : [
         {
           name : 'Strategy Management',
@@ -95,11 +118,11 @@
 
     <!-- About Us Seciton -->
     <section class="wrapper my-20">
-      <div class="grid grid-cols-2 gap-10">
+      <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10">
         <!-- Text -->
         <div class="space-y-10 w-full">
           <h4 class="uppercase text-primary font-bold">About Us</h4>
-          <h1 class="text-5xl drop-shadow-sm">To Have A Connected And Sustainable World</h1>
+          <h1 class="text-3xl lg:text-5xl drop-shadow-sm">To Have A Connected And Sustainable World</h1>
           <p class="leading-8 text-lg">
             Kranti Associates Canada Limited was established in 2011 under the Canadian Federal Jurisdiction to provide unmatched consultancy services in multi-disciplinary
             sectors. <br /><br />
@@ -113,17 +136,17 @@
         </div>
 
         <!-- Image -->
-        <div class="w-full h-[650px]">
+        <div class="w-full h-[300px] lg:h-[650px]">
           <img class="w-full h-full object-cover" src="./dist/images/about-us.png" />
         </div>
       </div>
     </section>
 
     <!-- Banner Section -->
-    <section class="bg-primary py-10 my-40">
+    <section class="bg-primary py-10">
       <div class="wrapper">
         <div
-          class="grid grid-cols-3"
+          class="md:grid grid-cols-3"
           x-data="{counters : [
           {top : 'Served', bottom : 'Clients', count : '20+', img : 'rating'},
           {top : 'Across', bottom : 'Countries', count : '9+',  img : 'coronavirus'},
@@ -131,7 +154,7 @@
           ]}"
         >
           <template x-for="counter in counters">
-            <div class="flex gap-10 items-center justify-center">
+            <div class="flex gap-10 items-center justify-start lg:justify-center w-[270px] mx-auto my-10">
               <img class="w-[100px]" :src="`./dist/images/svg/${counter.img}.svg`" />
               <div class="text-slate-100">
                 <h4 x-text="counter.top"></h4>
@@ -145,20 +168,20 @@
     </section>
 
     <!-- Mission Vission Values -->
-    <section class="wrapper my-20">
-      <div class="grid grid-cols-2 gap-10">
+    <section class="wrapper py-16 lg:py-28">
+      <div class="lg:grid grid-cols-2 gap-10">
         <!-- Images -->
-        <div class="w-full relative">
+        <div class="w-full relative h-[450px] lg:h-auto">
           <img class="h-[360px] object-contain absolute right-0 top-0" src="./dist/images/core-large.png" />
-          <img class="h-[250px] object-contain absolute left-0 top-[180px] border-slate-50 border-8" src="./dist/images/core-small.jpg" />
+          <img class="h-[180px] md:h-[250px] object-contain absolute left-0 top-[180px] border-slate-50 border-8" src="./dist/images/core-small.jpg" />
         </div>
 
         <!-- Contents -->
         <div class="space-y-10 w-full">
           <h4 class="uppercase text-primary font-bold">OUR CORE PHILOSOPHY</h4>
           <h1 class="text-5xl drop-shadow-sm">Here To Make A Difference</h1>
-          <div>
-            <ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab" role="tablist">
+          <div class="min-h-[150px]">
+            <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <a
                   href="#tabs-mission"
@@ -235,7 +258,7 @@
         <!-- slider -->
         <div class="owl-carousel owl-theme">
           <!-- Card -->
-          <div class="bg-white w-[416px] rounded-lg shadow-lg px-6 py-8">
+          <div class="bg-white md:w-[416px] rounded-lg shadow-lg px-6 py-8">
             <div class="flex items-center gap-5">
               <div class="w-14 h-14">
                 <img class="w-full h-full object-cover rounded-full" src="./dist/images/core-large.png" />
@@ -249,7 +272,7 @@
           </div>
 
           <!-- Card -->
-          <div class="bg-white w-[416px] rounded-lg shadow-lg px-6 py-8">
+          <div class="bg-white md:w-[416px] rounded-lg shadow-lg px-6 py-8">
             <div class="flex items-center gap-5">
               <div class="w-14 h-14">
                 <img class="w-full h-full object-cover rounded-full" src="./dist/images/core-large.png" />
@@ -263,13 +286,13 @@
           </div>
 
           <!-- Card -->
-          <div class="bg-white w-[416px] rounded-lg shadow-lg px-6 py-8">
+          <div class="bg-white md:w-[416px] rounded-lg shadow-lg px-6 py-8">
             <div class="flex items-center gap-5">
               <div class="w-14 h-14">
                 <img class="w-full h-full object-cover rounded-full" src="./dist/images/core-large.png" />
               </div>
               <div class="w-full flex-1">
-                <h3 class="text-lg text-slate-900">Dorothy Coleman</h3>
+                <h3 class="text-lg text-slate-900">Cathrin Piears</h3>
                 <p class="text-base text-slate-700">Head of Finance, XYZ</p>
               </div>
             </div>
@@ -284,10 +307,10 @@
       <h4 class="uppercase text-primary font-bold text-center">Blog</h4>
       <h1 class="text-5xl drop-shadow-sm text-slate-900 text-center mt-6">Client Comments</h1>
 
-      <div class="grid grid-cols-3 gap-10 mt-20" x-data="{blogs : [1,2,3]}">
+      <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 space-y-16 md:space-y-0 md:mt-20 px-4" x-data="{blogs : [1,2,3]}">
         <template x-for="blog in blogs">
-          <div class="">
-            <img class="w-full h-[300px] object-cover" src="./dist/images/blog/blog-thumb-1.jpg" />
+          <div class="max-w-sm mx-auto">
+            <img class="w-full h-[300px] object-cover rounded-tr-md rounded-tl-md" src="./dist/images/blog/blog-thumb-1.jpg" />
             <div class="bg-white rounded-md shadow-md px-4 py-6 space-y-3 h-[260px] relative">
               <h5 class="text-base text-slate-700">22 March 2021</h5>
               <h3 class="text-xl text-slate-900 font-bold">The Real Reason We Need To Stop Trying Too Hard In Automation</h3>
@@ -317,7 +340,7 @@
         ></iframe>
       </div>
       <div
-        class="-mt-20 wrapper flex justify-center gap-10"
+        class="-mt-20 wrapper flex justify-center flex-col md:flex-row items-center gap-10"
         x-data="{communications : [
         {
           name : 'Email',
@@ -350,11 +373,11 @@
     <!-- Get in touch -->
     <section class="wrapper py-28">
       <h4 class="uppercase text-primary font-bold text-center">Write Here</h4>
-      <h1 class="text-5xl drop-shadow-sm text-slate-900 text-center mt-6">Get In Touch</h1>
+      <h1 class="text-3xl md:text-5xl drop-shadow-sm text-slate-900 text-center mt-6">Get In Touch</h1>
 
-      <form method="POST" action="" class="w-8/12 mx-auto my-10">
+      <form method="POST" action="" class="md:w-8/12 mx-auto my-10">
         <!-- Row with two column -->
-        <div class="grid grid-cols-2 mt-4 gap-5">
+        <div class="md:grid grid-cols-2 mt-4 gap-5">
           <div class="w-full">
             <label for="name"> Name </label>
             <input class="w-full" type="name" placeholder="Enter Your Name Here" name="name" />
@@ -374,8 +397,8 @@
 
     <footer class="footer-bg bg-cover bg-center">
       <!-- Card -->
-      <div class="wrapper grid grid-cols-3 justify-items-center">
-        <div class="w-[350px] border-t-4 bg-[#F1F5F9] border-primary p-4 text-center -mt-16 mb-20">
+      <div class="wrapper grid grid-rows-2 md:grid-rows-1 grid-cols-4 md:grid-cols-3 justify-items-center">
+        <div class="col-span-4 md:col-auto w-[300px] lg:w-[350px] border-t-4 bg-[#F1F5F9] border-primary p-4 text-center -mt-16 lg:mb-10">
           <img class="mx-auto" src="./dist/images/logo.png" alt="Kranti Associates LTD." />
           <p class="text-sm text-slate-700">
             Kranti Associates Canada Limited was established in 2011 under the Canadian Federal Jurisdiction to provide unmatched consultancy services in multi-disciplinary
@@ -403,7 +426,7 @@
           </div>
         </div>
 
-        <div class="pt-20">
+        <div class="pt-10 md:pt-20 col-span-2 md:col-auto w-full md:w-auto">
           <h3 class="text-slate-100 font-medium text-xl">Services</h3>
           <ul class="text-slate-100 text-sm ml-3 mt-2 space-y-2">
             <li>
@@ -428,7 +451,7 @@
           </ul>
         </div>
 
-        <div class="pt-20">
+        <div class="pt-10 md:pt-20 col-span-2 md:col-auto w-full md:w-auto">
           <h3 class="text-slate-100 font-medium text-xl">Logical Facilities</h3>
           <ul class="text-slate-100 text-sm ml-3 mt-2 space-y-2">
             <li>
@@ -467,15 +490,16 @@
       $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
           loop: true,
-          center: true,
+          center: false,
           margin: 10,
-          animateIn: true,
+          animateIn: "flipInX",
+          animateOut: "slideOutDown",
           dots: true,
           rewind: true,
           nav: true,
           autoplayTimeout: 2500,
           autoplayHoverPause: true,
-          slideTransition: "ease",
+          smartSpeed: 450,
           responsive: {
             0: {
               items: 1,
@@ -487,5 +511,7 @@
         });
       });
     </script>
+
+    <script src="./dist/scripts/scripts.js"></script>
   </body>
 </html>

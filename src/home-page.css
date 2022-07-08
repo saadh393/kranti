@@ -18,3 +18,11 @@
   font-family: "Mulish";
   font-weight: bold;
 }
+
+.servicesMenu .active div {
+  @apply bg-primary overflow-hidden;
+}
+
+.servicesMenu .active div h4 {
+  @apply text-slate-50;
+}
