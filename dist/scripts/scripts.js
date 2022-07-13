@@ -25,3 +25,5 @@ $(document).ready(function () {
     }
   });
 });
+
+document.querySelector(".place-card-large").styles.display = "none";
