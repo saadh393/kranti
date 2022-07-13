@@ -2,6 +2,12 @@
   font-family: "Mulish";
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: 2rem;
+  scroll-snap-align: center;
+}
+
 .link {
   display: inline-block;
   color: #d32c32;

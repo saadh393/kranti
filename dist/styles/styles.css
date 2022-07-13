@@ -758,6 +758,12 @@ video {
   font-family: "Mulish";
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: 2rem;
+  scroll-snap-align: center;
+}
+
 .link {
   display: inline-block;
   color: #d32c32;
@@ -1824,16 +1830,12 @@ textarea:focus {
     height: auto;
   }
 
-  .lg\:h-\[750px\] {
-    height: 750px;
+  .lg\:h-\[550px\] {
+    height: 550px;
   }
 
   .lg\:h-\[400px\] {
     height: 400px;
-  }
-
-  .lg\:h-\[550px\] {
-    height: 550px;
   }
 
   .lg\:w-\[350px\] {
