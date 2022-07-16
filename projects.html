@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Defer Scripts -->
+    <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./dist/styles/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./dist/styles/owl.theme.default.min.css" />
+
+    <!-- Internal Styles -->
+    <link rel="stylesheet" href="./dist/styles/styles.css" />
+
+    <title>Projects | Kranti Associates LTD.</title>
+  </head>
+  <body>
+    <nav class="wrapper backdrop-blur-sm absolute top-0 left-0 right-0 bg-white/30 overflow-hidden rounded-bl-2xl rounded-br-2xl">
+      <div class="flex justify-between items-center md:items-end md:pl-4">
+        <a href="./index.html">
+          <img class="h-20 mb-2" src="./dist/images/logo.png" />
+        </a>
+        <ul class="hidden md:flex gap-x-8 items-center">
+          <li>
+            <a href="/#about">About Us</a>
+          </li>
+
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+
+          <li>
+            <a href="./projects.html">Projects</a>
+          </li>
+
+          <li class="bg-primary px-6 py-3 text-white rounded-tl-2xl">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+        <svg id="hamburger" width="25" height="20" viewBox="0 0 16 15" data-state="closed" class="mr-4 md:hidden block" xmlns="http://www.w3.org/2000/svg">
+          <rect class="transition-all" id="one" x="6.85144" y="1.23901" width="8.85718" height="1.49418" rx="0.747088" fill="#fff" />
+          <rect class="transition-all" id="two" x="0.193237" y="7.26367" width="15.5153" height="1.49418" rx="0.747088" fill="#fff" />
+          <rect class="transition-all" id="three" x="4.2196" y="13.2584" width="11.4889" height="1.49418" rx="0.747088" fill="#fff" />
+        </svg>
+      </div>
+
+      <!-- Mobile Nav -->
+      <ul class="text-center transition-all max-h-[190px] h-0" id="mobileNav">
+        <li class="border-t py-3 border-slate-200/10">
+          <a href="#">About Us</a>
+        </li>
+
+        <li class="border-t py-3 border-slate-200/10">
+          <a href="./services.html">Services</a>
+        </li>
+
+        <li class="border-t py-3 border-slate-200/10">
+          <a href="./projects.html">Projects</a>
+        </li>
+
+        <li class="bg-primary px-6 py-3 text-white">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+      <a href="#" class="block hover:no-underline">
+        <div class="space-y-5 bg-center w-full h-[650px] text-center flex items-center flex-col justify-center bg-cover hero-banner">
+          <h1 class="text-primary text-5xl lg:text-6xl font-bold">Consultancy Services</h1>
+          <h4 class="text-slate-100 text-2xl lg:text-2xl font-medium">in Multi-Disciplinary Sectors</h4>
+        </div>
+      </a>
+    </section>
+    <!-- End of Hero Section -->
+
+    <section>
+      <div class="wrapper py-16">
+        <!-- Search -->
+        <div class="py-8 w-full">
+          <input class="w-8/12 mx-auto block" type="text" placeholder="Search" name="search" />
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th width="60px">SL</th>
+                <th>Name of the Project</th>
+                <th>Associates</th>
+                <th>Funded by</th>
+                <th>Executing Agency/Client</th>
+                <th>Area of Expertise</th>
+                <th>Type of Work</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Operation & Maintenance (O&M) Study of Early Implementation Project (EIP) on FCDI Under BWDB</td>
+                <td>BETS</td>
+                <td>Netherlands-Swedish Assistance</td>
+                <td>BWDB</td>
+                <td>Flood Control, Drainage & Irrigation</td>
+                <td>O&M Study</td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Operation & Maintenance (O&M) Study of Early Implementation Project (EIP) on FCDI Under BWDB</td>
+                <td>BETS</td>
+                <td>Netherlands-Swedish Assistance</td>
+                <td>BWDB</td>
+                <td>Flood Control, Drainage & Irrigation</td>
+                <td>O&M Study</td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Operation & Maintenance (O&M) Study of Early Implementation Project (EIP) on FCDI Under BWDB</td>
+                <td>BETS</td>
+                <td>Netherlands-Swedish Assistance</td>
+                <td>BWDB</td>
+                <td>Flood Control, Drainage & Irrigation</td>
+                <td>O&M Study</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <!-- Pegination -->
+          <ul class="flex space-x-2 justify-center my-10 pagination-Container">
+            <a href="#">
+              <li class="h-10 px-2 text-gray-700 grid place-items-center rounded-md border lg:border-2 border-gray-200 bg-gray-200">
+                <span class="text-slate-700 font-medium group-hover:text-slate-200">Previous</span>
+              </li>
+            </a>
+
+            <a href="#" class="group">
+              <li class="active w-10 h-10 text-gray-800 grid place-items-center rounded-md border lg:border-2 border-primary group-hover:bg-primary">
+                <span class="text-slate-700 font-medium group-hover:text-slate-200">1</span>
+              </li>
+            </a>
+
+            <a href="#" class="group">
+              <li class="w-10 h-10 text-gray-800 grid place-items-center rounded-md border lg:border-2 border-primary group-hover:bg-primary">
+                <span class="text-slate-700 font-medium group-hover:text-slate-200">2</span>
+              </li>
+            </a>
+            <a href="#" class="group">
+              <li class="w-10 h-10 text-gray-800 grid place-items-center rounded-md border lg:border-2 border-primary group-hover:bg-primary">
+                <span class="text-slate-700 font-medium group-hover:text-slate-200">3</span>
+              </li>
+            </a>
+
+            <a href="#" class="group">
+              <li class="w-10 h-10 text-gray-800 grid place-items-center rounded-md border lg:border-2 border-primary group-hover:bg-primary">
+                <span class="text-slate-700 font-medium group-hover:text-slate-200">4</span>
+              </li>
+            </a>
+
+            <a href="#" class="group">
+              <li class="h-10 px-2 text-gray-800 grid place-items-center rounded-md border lg:border-2 border-primary group-hover:bg-primary">
+                <span class="text-slate-700 font-medium group-hover:text-slate-200">Next</span>
+              </li>
+            </a>
+          </ul>
+
+          <div class="flex items-center gap-3 justify-center">
+            <h4>Show</h4>
+            <select name="entites" class="px-4 py-2 rounded-md border outline-none">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+            <h4>entries</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section>
+      <div style="pointer-events: none; border: 0">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1668.6462087467285!2d-75.93643606327208!3d45.30201708669018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd2006082835449%3A0x391fb782ad9976c7!2s213%20Mission%20Trail%20Cres%2C%20Stittsville%2C%20ON%20K2S%201B9%2C%20Canada!5e0!3m2!1sen!2sbd!4v1656325174758!5m2!1sen!2sbd"
+          width="100%"
+          height="600"
+          style="border: 0"
+          allowfullscreen="false"
+          loading="lazy"
+          disableDefaultUI="true"
+          scrolling="false"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div
+        class="-mt-20 wrapper flex justify-center flex-col md:flex-row items-center gap-10"
+        x-data="{communications : [
+        {
+          name : 'Email',
+          subtitle : 'kranticanada@gmail.com',
+          image : 'open-email'
+        }, {
+          name : 'Phone',
+          subtitle : '+1-613-402-6848',
+          image : 'phone-call'
+        }, {
+          name : 'Office Address',
+          subtitle : '213 Mission Trail Crescent Kanata, Ontario, K2TOH7 Canada',
+          image : 'office-building'
+        }
+        ]}"
+      >
+        <template x-for="communication in communications">
+          <div
+            class="group hover:bg-primary border border-slate-400/20 transition-all cursor-pointer w-52 h-52 p-5 bg-slate-50/40 backdrop-blur-xl flex flex-col justify-center items-center rounded-md"
+          >
+            <img class="h-16 w-16 mx-auto group-hover:hidden" :src="`./dist/images/contact/${communication.image}-default.svg`" />
+            <img class="h-16 w-16 mx-auto hidden group-hover:block" :src="`./dist/images/contact/${communication.image}-active.svg`" />
+            <h4 x-text="communication.name" class="mt-4 text-slate-800 group-hover:text-slate-100 group-hover:font-bold text-center text-base font-bold"></h4>
+            <p x-text="communication.subtitle" class="text-center text-xs group-hover:text-slate-100"></p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Get in touch -->
+    <section class="wrapper py-28">
+      <h4 class="uppercase text-primary font-bold text-center">Write Here</h4>
+      <h1 class="text-3xl md:text-5xl drop-shadow-sm text-slate-900 text-center mt-6">Get In Touch</h1>
+
+      <form method="POST" action="" class="md:w-8/12 mx-auto my-10">
+        <!-- Row with two column -->
+        <div class="md:grid grid-cols-2 mt-4 gap-5">
+          <div class="w-full">
+            <label for="name"> Name </label>
+            <input class="w-full" type="name" placeholder="Enter Your Name Here" name="name" />
+          </div>
+
+          <div class="w-full">
+            <label for="email"> Email Address </label>
+            <input class="w-full" type="email" placeholder="Enter Your email Here" name="email" />
+          </div>
+        </div>
+        <!-- Row with Two column Ends Here -->
+        <textarea placeholder="Type your Message Here" name="message" rows="10" class="w-full mt-5"></textarea>
+
+        <button class="block mt-5 bg-primary rounded-full px-5 py-2 text-white shadow-md shadow-red-600/40 mx-auto" type="submit" value="Submit">Submit</button>
+      </form>
+    </section>
+
+    <footer class="footer-bg bg-cover bg-center">
+      <!-- Card -->
+      <div class="wrapper grid grid-rows-2 md:grid-rows-1 grid-cols-4 md:grid-cols-3 justify-items-center">
+        <div class="col-span-4 md:col-auto w-[300px] lg:w-[350px] border-t-4 bg-[#F1F5F9] border-primary p-4 text-center -mt-16 lg:mb-10">
+          <img class="mx-auto" src="./dist/images/logo.png" alt="Kranti Associates LTD." />
+          <p class="text-sm text-slate-700">
+            Kranti Associates Canada Limited was established in 2011 under the Canadian Federal Jurisdiction to provide unmatched consultancy services in multi-disciplinary
+            sectors.
+          </p>
+          <!-- social Media -->
+          <div class="flex gap-5 justify-center my-5">
+            <!-- Facebook -->
+            <a href="#" class="w-10 h-10 grid place-items-center bg-[#E2E8F0] rounded-full group transition-colors cursor-pointer hover:bg-[#D32C32] hover:shadow-primary">
+              <img class="w-5 h-5 group-hover:hidden" src="./dist/images/social-media/facebook-default.svg" alt="Faecbook Page of Kranti Associates" />
+              <img class="w-6 h-6 group-hover:block hidden" src="./dist/images/social-media/facebook-active.svg" alt="Faecbook Page of Kranti Associates" />
+            </a>
+
+            <!-- Twitter -->
+            <a href="#" class="w-10 h-10 grid place-items-center bg-[#E2E8F0] rounded-full group transition-colors cursor-pointer hover:bg-[#D32C32] hover:shadow-primary">
+              <img class="w-5 h-5 group-hover:hidden" src="./dist/images/social-media/twitter-default.svg" alt="Faecbook Page of Kranti Associates" />
+              <img class="w-6 h-6 group-hover:block hidden" src="./dist/images/social-media/twitter-active.svg" alt="Faecbook Page of Kranti Associates" />
+            </a>
+
+            <!-- Linkedin -->
+            <a href="#" class="w-10 h-10 grid place-items-center bg-[#E2E8F0] rounded-full group transition-colors cursor-pointer hover:bg-[#D32C32] hover:shadow-primary">
+              <img class="w-5 h-5 group-hover:hidden" src="./dist/images/social-media/linkedin-default.svg" alt="Faecbook Page of Kranti Associates" />
+              <img class="w-6 h-6 group-hover:block hidden" src="./dist/images/social-media/linkedin-active.svg" alt="Faecbook Page of Kranti Associates" />
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-10 md:pt-20 col-span-2 md:col-auto w-full md:w-auto">
+          <h3 class="text-slate-100 font-medium text-xl">Services</h3>
+          <ul class="text-slate-100 text-sm ml-3 mt-2 space-y-2">
+            <li>
+              <a href="#">Service Page 1</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 2</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 3</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 4</a>
+            </li>
+
+            <li>
+              <a href="#">Service Page 5</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-10 md:pt-20 col-span-2 md:col-auto w-full md:w-auto">
+          <h3 class="text-slate-100 font-medium text-xl">Logical Facilities</h3>
+          <ul class="text-slate-100 text-sm ml-3 mt-2 space-y-2">
+            <li>
+              <a href="#">Logical Facilities 1</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 2</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 3</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 4</a>
+            </li>
+
+            <li>
+              <a href="#">Logical Facilities 5</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-center text-white pb-8">Designed and Developed by <img class="inline-block" src="./dist/images/analyzen.svg" /></p>
+      </div>
+    </footer>
+
+    <script src="./dist/scripts/jquery.min.js"></script>
+    <script src="./dist/scripts/owl.carousel.min.js"></script>
+
+    <script></script>
+
+    <script src="./dist/scripts/scripts.js"></script>
+  </body>
+</html>

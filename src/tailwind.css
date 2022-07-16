@@ -8,6 +8,7 @@
 
 /* Pages */
 @import "./home-page.css";
+@import "./projects.css";
 
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
